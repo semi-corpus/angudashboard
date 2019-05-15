@@ -3,20 +3,17 @@
         <h2>GOALBOARD.</h2>
     </div>
     <div class="add--block__option">
-        <input type="submit" value="+" id="choose--option__btn">
-        <div class="choose--option__dropdown" style="display:none;">
-            <ul>
-                <li id="add--block__btn">PerfBlock</li>
-                <li id="add--todoblock__btn">ToDoBlock</li>
+        <input value="+" id="choose--option__btn" (click)="toggleMenu()" (clickOutside)="onClickedOutside()">
+        <div class="choose--option__overlay" [hidden]="menuHidden">
+            <ul Class="choose--option__dropdown" >
+                <li id="add--block__btn" (click)="creatBlocPerf()"><button>PerfBlock</button></li>
+                <li id="add--todoblock__btn"><button>ToDoBlock</button></li>
             </ul>
         </div>
     </div>
     <div class="top--nav__links">
         <ul>
-            <li class="scheme--switcher"><a><img class="sun" src="img/icons/switch--light.png"></a></li>
-            <li><a href="about.html">About</a></li>
-            <li>Help</li>
-            <li id="link--pro"><a href="contact.html">Contact</a></li>
+            <li class="scheme--switcher"><img class="sun" src="../../assets/img/icons/switch--light.png"></li>
         </ul>
     </div>
 </nav>

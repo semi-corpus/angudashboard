@@ -47,6 +47,7 @@
 #choose--option__btn
   background: transparent
   border-radius: 100%
+  border: none
   color: #cff787
   cursor: pointer
   font-size: 18px
@@ -60,12 +61,13 @@
   box-shadow: 0 0 500px 500px rgba(51,56,62,.4)
   color: black
   font-weight: 300
-  margin-top: 13px
+  margin: 75px 0 0 200px
   padding: 16px
   border-radius: 4px
   width: 200px
   z-index: 3
   transition: boxShadow .4s linear
+
 
 .choose--option__dropdown:before
   content: ""
@@ -74,8 +76,8 @@
   border-bottom-left-radius: 100%
   border-top-left-radius: 100%
   position: absolute
-  margin-top: -22px
-  left: 233px
+  margin-top: -24px
+  left: 230px
   right: 0
   height: 20px
   width: 20px
@@ -101,6 +103,15 @@
   background: #505357
   color: #faffff
   letter-spacing:  1px
+
+.choose--option__overlay
+    background: rgba(0,0,0,.2)
+    height: 100vh
+    position: absolute
+    width: 100%
+    left: 0
+    top: 0
+
 
 /* Top Nav :  Links */
 .top--nav__links ul 

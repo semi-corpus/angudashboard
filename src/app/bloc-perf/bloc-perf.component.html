@@ -1,1 +1,20 @@
-
+<form (ngSubmit)="addBlocPerf; form.reset()" class="block-added-pf" #form="ngForm">
+    <div>
+        <label for="create[name]">Nom</label>
+        <input id="create[name]" name="name" [(ngModel)]="newBlocPerf.name" #inputName="ngModel" maxlength="25"
+            class="input--name" required pattern="[ a-zA-Z0-9_ -]*">
+    </div>
+    <div>
+        <label for="create[performanceGoal]">Performance Goal</label>
+        <input id="create[performanceGoal]" name="performanceGoal" [(ngModel)]="newBlocPerf.performanceGoal"
+            class="input--value__goal" required pattern="[ 0-9 ]*">
+    </div>
+    <div>
+        <label for="create[currentPerf]">Performance Goal</label>
+        <input id="create[currentPerf]" name="currentPerf" [(ngModel)]="newBlocPerf.currentPerf"
+            class="input--value__current" required pattern="[ 0-9 ]*">
+    </div>
+    <div class="submit--div">
+        <input type="submit" value="GO" class="submit--input">
+    </div>
+</form>
