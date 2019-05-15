@@ -1,0 +1,131 @@
+/* Top Nav */
+.top--nav__inner
+  background: #23292e
+  border-bottom: 1px solid #080808
+  color: #FAFFFF
+  font-family:  'Exo 2', sans-serif
+  height: 80px
+  position: fixed
+  top: 0
+  width: 100%
+  z-index: 2
+
+.top--nav__dshbrd
+  border-right: 1px solid #080808
+  display: inline-block
+  font-family:  'Inter', sans-serif
+  font-size: 20px
+  font-weight: 900
+  line-height: 80px
+  padding-left: 30px
+  vertical-align:  middle
+  width: 200px
+
+/* Top Nav :  Option Button */
+.add--block__option
+  background: transparent
+  border: 2px solid #faffff
+  border-left: 2px solid grey
+  border-right: 2px solid grey
+  border-radius: 100%
+  font-weight:  900
+  height: 40px
+  margin-left: 20px
+  display: inline-block
+  text-align:  center  
+  transition:  all .4s linear
+  vertical-align: middle
+  width: 40px
+
+.add--block__option:hover
+  background: #5f2fb6
+  border: 2px solid grey
+  border-left: 2px solid #faffff
+  border-right: 2px solid #faffff
+  transition:  all .4s linear
+
+#choose--option__btn
+  background: transparent
+  border-radius: 100%
+  color: #cff787
+  cursor: pointer
+  font-size: 18px
+  font-weight:  900
+  height: 36px
+  text-align:  center
+  width: 36px
+
+.choose--option__dropdown
+  background: #FAFFFF
+  box-shadow: 0 0 500px 500px rgba(51,56,62,.4)
+  color: black
+  font-weight: 300
+  margin-top: 13px
+  padding: 16px
+  border-radius: 4px
+  width: 200px
+  z-index: 3
+  transition: boxShadow .4s linear
+
+.choose--option__dropdown:before
+  content: ""
+  background: #FAFFFF
+  border-bottom-right-radius: 100%
+  border-bottom-left-radius: 100%
+  border-top-left-radius: 100%
+  position: absolute
+  margin-top: -22px
+  left: 233px
+  right: 0
+  height: 20px
+  width: 20px
+  transform: rotate(-45deg)
+
+.choose--option__dropdown li
+  cursor: pointer
+  font-weight: 500
+  letter-spacing:  1px
+
+.choose--option__dropdown li:first-child
+  border-bottom: 1px solid #306d71
+  border-top-left-radius: 4px
+  border-top-right-radius: 4px
+  padding: 10px
+
+.choose--option__dropdown li:last-of-type
+  border-bottom-left-radius: 4px
+  border-bottom-right-radius: 4px
+  padding: 10px
+
+.choose--option__dropdown li:hover
+  background: #505357
+  color: #faffff
+  letter-spacing:  1px
+
+/* Top Nav :  Links */
+.top--nav__links ul 
+  position: absolute
+  top: 28px
+  right: 40px
+
+.top--nav__links li
+  cursor: pointer
+  display: inline
+  font-size: 18px
+  margin: 0 10px
+  padding: 5px 8px
+  width: 300px
+
+.top--nav__links li:hover
+  color: #9f6ff6
+
+.scheme--switcher img
+  margin: auto
+  vertical-align:  bottom
+  transform: rotate(-45deg)
+  transition: .4s linear
+  width: 20px
+
+.scheme--switcher img:hover
+  transform: rotate(45deg)
+  transition: .4s linear
