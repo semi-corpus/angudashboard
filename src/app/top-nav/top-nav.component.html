@@ -3,11 +3,12 @@
         <h2>GOALBOARD.</h2>
     </div>
     <div class="add--block__option">
-        <input value="+" id="choose--option__btn" (click)="toggleMenu()" (clickOutside)="onClickedOutside()">
-        <div class="choose--option__overlay" [hidden]="menuHidden">
-            <ul Class="choose--option__dropdown" >
-                <li id="add--block__btn" (click)="creatBlocPerf()"><button>PerfBlock</button></li>
-                <li id="add--todoblock__btn"><button>ToDoBlock</button></li>
+        <input value="+" id="choose--option__btn" (click)="toggleMenu()">
+        <div [hidden]="menuHidden">
+            <div class="choose--option__overlay" (click)="closeMenu()"></div>
+            <ul Class="choose--option__dropdown">
+                <li id="add--block__btn"><button (click)="addBlocPerf()">PerfBlock</button></li>
+                <li id="add--todoblock__btn"><button (click)="addBlocToDot()">ToDoBlock</button></li>
             </ul>
         </div>
     </div>

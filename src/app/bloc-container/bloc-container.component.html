@@ -1,5 +1,6 @@
-<div>
-  <ul>
-    <li *ngFor=""></li>
-  </ul>
-</div>
+<ul>
+  <li *ngFor="let bloc of blocList" [ngSwitch]="bloc.type">
+    <app-bloc-perf *ngSwitchCase="'blocPerf'"></app-bloc-perf>
+    <app-bloc-todot *ngSwitchCase="'blocToDot'"></app-bloc-todot>
+  </li>
+</ul>

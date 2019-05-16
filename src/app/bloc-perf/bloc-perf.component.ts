@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component } from '@angular/core';
 import { BlocPerf } from '../blocperf';
 
 @Component({
@@ -9,11 +9,5 @@ import { BlocPerf } from '../blocperf';
 export class BlocPerfComponent{
 
   newBlocPerf = new BlocPerf();
-  
-  @Output() blocCreated = new EventEmitter<BlocPerf>()
-
-  addBlocPerf() {
-    this.blocCreated.emit(this.newBlocPerf)
-    this.newBlocPerf = new BlocPerf()
-  }
+ 
 }

@@ -1,7 +1,6 @@
-import { Component, Input,} from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 import { BlocPerf } from '../blocperf';
 import { BlocToDot } from '../bloctodot';
-
 
 @Component({
   selector: 'app-top-nav',
@@ -10,19 +9,22 @@ import { BlocToDot } from '../bloctodot';
 })
 export class TopNavComponent {
 
-  @Input()
-  
+  @Output() blocCreated = new EventEmitter()
+
   menuHidden = true;
- 
+
 
   toggleMenu() {
     this.menuHidden = !this.menuHidden
   }
-  onClickedOutside(){
+  closeMenu(){
     this.menuHidden = true
-    }
-    creatBlocPerf(){
-
-    }
   }
+  addBlocPerf() {
+    this.blocCreated.emit(BlocPerf)
+  }
+  addBlocToDot(){
+    this.blocCreated.emit(BlocToDot)
+  }
+}
 

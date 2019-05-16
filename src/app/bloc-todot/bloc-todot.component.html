@@ -1,7 +1,15 @@
-<form class="block-added-td">
-    <input type="text" maxlength="25" class="input--name" placeholder="Name your new block" required>
-    <input type="number" maxlength="2" value="" min="0" max="30" class="input--duration" placeholder="Duration" required>
-    <div class="submit--div">
-        <input type="submit" value="GO" class="submit--input">
-    </div>
-</form>
+<form (ngSubmit)="addBlocToDot; form.reset()" class="block-added-td" #form="ngForm">
+        <div>
+            <label for="create[name]">Nom</label>
+            <input id="create[name]" name="name" [(ngModel)]="newBlocToDot.name" #inputName="ngModel" maxlength="25"
+                class="input--name" required pattern="[ a-zA-Z0-9_ -]*">
+        </div>
+        <div>
+            <label for="create[duration]">Duration</label>
+            <input id="create[duration]" name="performanceGoal" [(ngModel)]="newBlocToDot.duration"
+                class="input--value__duration" required pattern="[ 0-9 ]*">
+        </div>
+        <div class="submit--div">
+            <input type="submit" value="GO" class="submit--input">
+        </div>
+    </form>

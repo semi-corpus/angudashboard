@@ -1,4 +1,9 @@
-<app-top-nav></app-top-nav>
-<app-aside></app-aside>
-<app-bloc-container></app-bloc-container>
-<app-bloc-intro></app-bloc-intro>
+<header>
+    <app-top-nav (blocCreated)="addBlocs($event)"></app-top-nav>
+</header>
+<div>
+    <app-aside></app-aside>
+</div>
+<main>
+    <app-bloc-container [blocList]="blocList"></app-bloc-container>
+</main>
