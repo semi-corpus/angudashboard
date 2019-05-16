@@ -10,6 +10,8 @@ import { AsideComponent } from './aside/aside.component';
 import { BlocPerfComponent } from './bloc-perf/bloc-perf.component';
 import { BlocTodotComponent } from './bloc-todot/bloc-todot.component';
 import { BlocContainerComponent } from './bloc-container/bloc-container.component';
+import { BlocPerfSubmitedComponent } from './bloc-perf-submited/bloc-perf-submited.component';
+import { BlocTodotSubmitedComponent } from './bloc-todot-submited/bloc-todot-submited.component';
 
 
 @NgModule({
@@ -19,7 +21,9 @@ import { BlocContainerComponent } from './bloc-container/bloc-container.componen
     AsideComponent,
     BlocPerfComponent,
     BlocTodotComponent,
-    BlocContainerComponent
+    BlocContainerComponent,
+    BlocPerfSubmitedComponent,
+    BlocTodotSubmitedComponent
   ],
   imports: [
     BrowserModule,

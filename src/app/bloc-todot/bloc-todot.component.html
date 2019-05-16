@@ -2,12 +2,12 @@
         <div>
             <label for="create[name]">Nom</label>
             <input id="create[name]" name="name" [(ngModel)]="newBlocToDot.name" #inputName="ngModel" maxlength="25"
-                class="input--name" required pattern="[ a-zA-Z0-9_ -]*">
+                class="input--name" required pattern="[ a-zA-Z0-9_ -]*" type="text">
         </div>
         <div>
             <label for="create[duration]">Duration</label>
             <input id="create[duration]" name="performanceGoal" [(ngModel)]="newBlocToDot.duration"
-                class="input--value__duration" required pattern="[ 0-9 ]*">
+                class="input--value__duration" required pattern="[ 0-9 ]*" type="number">
         </div>
         <div class="submit--div">
             <input type="submit" value="GO" class="submit--input">

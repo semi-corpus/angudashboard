@@ -123,3 +123,187 @@ h6
 
 a
   color: inherit
+
+/* JS Added Blocks */
+.block-added-td,
+.block-added-pf
+  background: #222
+  box-shadow: 0 0 1px rgba(19,0,57,.1)
+  border-left: 2px solid transparent
+  border-bottom: 1px solid #080808
+  display: flex
+  justify-content:  space-around
+  flex-flow: row wrap
+  align-items: center
+  min-height: 90px
+  padding: 5px 10px
+  margin: 0px auto
+  width: 100%
+  animation: swashIn .3s linear
+
+.submit--input
+  background: #7F3FF3
+  border: 2px solid transparent
+  border-radius: 100%
+  color: white
+  cursor: pointer
+  font-weight:  700
+  margin: auto
+  height: 40px
+  width: 40px
+
+.submit--input:hover
+  background: #cff787
+  border: 2px solid #080808
+  color: #23292e
+
+
+.block-added-td:hover,
+.block-added-pf:hover
+  border-left: 2px solid #7f3ff3
+  transition: .2s linear
+
+.block-added-td form,
+.block-added-pf form
+  width: 100%
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button 
+    -webkit-appearance: none
+    margin: 0
+
+input[type=number] 
+    -moz-appearance: textfield
+
+.block-added-pf input[type=text],
+.block-added-td input[type=text],
+.block-added-pf input[type=number],
+.block-added-td input[type=number],
+.current--position
+  background: #211e1e
+  border: 1px solid #080808
+  border-radius: 4px
+  color: #4a7f83
+  font-size: 13px
+  height: 40px
+  margin: 0 30px
+  padding: 0 10px
+  text-transform: capitalize
+  text-align: center
+  width: 280px
+
+.current--position
+  line-height: 36px
+
+.block-added-pf input[type=text]:hover::placeholder,
+.block-added-pf input[type=number]:hover::placeholder,
+.block-added-td input[type=text]:hover::placeholder,
+.block-added-td input[type=number]:hover::placeholder
+  background: transparent
+
+.block-added-pf input[type=text]::placeholder,
+.block-added-pf input[type=number]::placeholder,
+.block-added-td input[type=text]::placeholder,
+.block-added-td input[type=number]::placeholder
+  background: transparent
+  border-radius: 5px
+  color: #DDDDDD
+  opacity: 1
+  text-align: center
+  text-transform: none
+
+.block-added-pf input[type=text]:focus,
+.block-added-td input[type=focus]:focus,
+.block-added-pf input[type=text]:focus,
+.block-added-td input[type=focus]:focus
+  background: transparent
+  border-bottom: 2px solid #B3F33F
+  color: #FAFFFF
+
+.submit--div
+  display: inline-block
+  margin: -1px 30px
+  transition: all .4s linear
+  vertical-align: top
+
+.delete--div  
+  display: inline-block
+  margin: -1px auto
+  transition: all .4s linear
+  vertical-align: top
+
+.delete--input
+  //background: #cff787 url("../img/icons/delete--dark.png")
+  background-size: 15px 15px
+  background-position:  center
+  background-repeat:  no-repeat
+  border: 2px solid #faffff
+  border-radius: 100%
+  color: white
+  cursor: pointer
+  font-weight:  900
+  margin: 0 30px
+  height: 40px
+  width: 40px
+  opacity: .7
+  transition: .4s linear
+  animation: vanishOut .6s ease-out
+  animation-delay: 0s
+
+.delete--input:hover
+  //background: #7F3FF3 url("../img/icons/delete.png")
+  background-size: 15px 15px
+  background-position:  center
+  background-repeat:  no-repeat
+  border: 2px solid #faffff
+  opacity: 1
+  transition: .4s linear
+
+/* PERF   */
+/* When Submitted */
+.block--added__date
+  display: inline-block
+  color: #858585
+  font-size: 11px
+  line-height: 40px
+  height: 40px
+  padding: 0 10px
+
+.data--ok
+  border: 1px solid #7F3FF3!important
+  border-radius: 4px
+  cursor: default
+  color: #7F3FF3!important
+  font-size: 16px!important
+  font-weight: 700
+  animation: fadeIn .7s linear
+
+/* TODO :  */
+/* When Submitted */
+.dot-list li
+  display: inline-block
+  color: #858585
+  margin: 0 2px
+
+.input--incredots
+  border: 1px solid #7F3FF3
+  border-radius: 100%
+  color: #7F3FF3
+  cursor: pointer
+  font-size: 19px
+  font-weight:  900
+  margin: auto
+  text-align: center
+  right: 0
+  height: 25px
+  width: 25px
+
+.highlight
+  color: #7F3FF3!important
+
+.small
+  color: #7F3FF3
+  font-size: 12px
+  height: 40px
+  line-height:  40px
+  animation: fadeIn .4s linear
