@@ -1,12 +1,12 @@
 <div>
-    <p>{{BlocPerfSubmited.date}}</p>
-  </div>
-  <div>
-    <p>{{BlocPerfSubmited.name}}</p>
-  </div>
-  <div>
-    <p>{{BlocPerfSubmited.data}}</p>
-  </div>
-  <div class="delete--div">
-    <button class="delete--input"></button>
-  </div>
+  <p>{{newBlocPerf.date | date:"dd/MM/yyyy"}}</p>
+</div>
+<div>
+  <p>{{newBlocPerf.name}}</p>
+</div>
+<div>
+  <p>{{newBlocPerf.result}}</p>
+</div>
+<div class="delete--div">
+  <button class="delete--input" (click)="deleteBloc()">&#10060;</button>
+</div>

@@ -10,4 +10,9 @@ import {BlocToDot } from '../bloctodot';
 export class BlocContainerComponent  {
   
   @Input() blocList: Array<BlocPerf | BlocToDot>
+  
+  deleteBloc(bloc: BlocPerf | BlocToDot){
+    console.log(bloc);
+   this.blocList.splice(this.blocList.indexOf(bloc),1)
+  }
 }

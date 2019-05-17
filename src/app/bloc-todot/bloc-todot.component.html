@@ -1,15 +1,15 @@
-<form (ngSubmit)="addBlocToDot; form.reset()" class="block-added-td" #form="ngForm">
-        <div>
-            <label for="create[name]">Nom</label>
-            <input id="create[name]" name="name" [(ngModel)]="newBlocToDot.name" #inputName="ngModel" maxlength="25"
-                class="input--name" required pattern="[ a-zA-Z0-9_ -]*" type="text">
-        </div>
-        <div>
-            <label for="create[duration]">Duration</label>
-            <input id="create[duration]" name="performanceGoal" [(ngModel)]="newBlocToDot.duration"
-                class="input--value__duration" required pattern="[ 0-9 ]*" type="number">
-        </div>
-        <div class="submit--div">
-            <input type="submit" value="GO" class="submit--input">
-        </div>
-    </form>
+<form (ngSubmit)="addBlocToDotSubmited()" class="block-added-td" #form="ngForm">
+    <div>
+        <label for="create[name]">Nom</label>
+        <input id="create[name]" name="name" [(ngModel)]="newBlocToDot.name" #inputName="ngModel" maxlength="25"
+            type="text" class="input--name" required pattern="[ a-zA-Z0-9_ -]*">
+    </div>
+    <div>
+        <label for="create[duration]">Duration</label>
+        <input id="create[duration]" name="duration" [(ngModel)]="newBlocToDot.duration" type="number"
+            class="input--value__duration" required pattern="(30|31|([1-2][0-9])|[1-9])">
+    </div>
+    <div class="submit--div">
+        <button [disabled]="form.invalid" class="submit--input">GO</button>
+    </div>
+</form>

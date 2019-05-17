@@ -1,15 +1,17 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { BlocPerf } from '../blocperf';
 
 @Component({
   selector: 'app-bloc-perf-submited',
   templateUrl: './bloc-perf-submited.component.html',
   styleUrls: ['./bloc-perf-submited.component.sass']
 })
-export class BlocPerfSubmitedComponent implements OnInit {
+export class BlocPerfSubmitedComponent {
 
-  constructor() { }
+  @Input() newBlocPerf: BlocPerf
+  @Output() blocDelete = new EventEmitter<BlocPerf>()
 
-  ngOnInit() {
+  deleteBloc(){
+    this.blocDelete.emit(this.newBlocPerf)
   }
-
 }

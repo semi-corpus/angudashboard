@@ -1,7 +1,8 @@
 <ul>
-  <li *ngFor="let bloc of blocList" [ngSwitch]="bloc.type">
-    <app-bloc-perf *ngSwitchCase="'blocPerf'"></app-bloc-perf>
-    <app-bloc-todot *ngSwitchCase="'blocToDot'"></app-bloc-todot>
-    
+  <li *ngFor="let bloc of blocList">
+    <app-bloc-perf *ngIf="bloc.type == 'blocPerf' && !bloc.lock" [newBlocPerf]="bloc"></app-bloc-perf>
+    <app-bloc-todot *ngIf="bloc.type == 'blocToDot' && !bloc.lock" [newBlocToDot]="bloc"></app-bloc-todot>
+    <app-bloc-perf-submited *ngIf="bloc.type == 'blocPerf' && bloc.lock" [newBlocPerf]="bloc" (blocDelete)="deleteBloc($event)"></app-bloc-perf-submited>
+    <app-bloc-todot-submited *ngIf="bloc.type == 'blocToDot' && bloc.lock" [newBlocToDot]="bloc"(blocDelete)="deleteBloc($event)"></app-bloc-todot-submited>
   </li>
 </ul>

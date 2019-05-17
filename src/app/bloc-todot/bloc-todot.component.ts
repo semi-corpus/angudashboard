@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { BlocToDot } from '../bloctodot';
 
 @Component({
@@ -8,6 +8,10 @@ import { BlocToDot } from '../bloctodot';
 })
 export class BlocTodotComponent {
 
-  newBlocToDot = new BlocToDot();
+  @Input() newBlocToDot : BlocToDot;
 
+  addBlocToDotSubmited(){
+    this.newBlocToDot.lock = true
+    this.newBlocToDot.position = 0
+  }
 }

@@ -1,15 +1,19 @@
 <div>
-    <p>{{BlocToDotSubmited.date}}</p>
+    <p>{{newBlocToDot.date | date:"dd/MM/yyyy"}}</p>
 </div>
 <div>
-    <p>{{BlocToDotSubmited.name}}</p>
+    <p>{{newBlocToDot.name}}</p>
+</div>
+<div class="dot-list">
+    <progress id="dot-bar" [max]="newBlocToDot.duration" [value]="newBlocToDot.position"></progress>
 </div>
 <div>
-    <p>{{BlocToDotSubmited.datadurationdot}}</p>
+    <div>Current State: {{newBlocToDot.position}} / {{newBlocToDot.duration}}</div>
 </div>
 <div>
-    <p>{{BlocToDotSubmited.dataperf}}</p>
+    <p>Click + To Increase Dots</p>
 </div>
+<div class="input--incredots" (click)="increaseDot()">+</div>
 <div class="delete--div">
-    <button class="delete--input"></button>
+    <button class="delete--input" (click)="deleteBloc()">&#10060;</button>
 </div>
